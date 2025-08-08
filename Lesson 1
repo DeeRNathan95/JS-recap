@@ -1,0 +1,82 @@
+// Identifiers or modifiers in javaScript 
+// they are used to determine what size or behaviour of variables are. 
+
+//Examples: var , let and const
+//var: we do not use.
+// let : used to store information that can be changed at any time 
+// const: is uesed to store information that are not to be changed 
+//--------------------------------------------------------------------------------------------------------------
+// const Example= "this is an example" 
+//Example =" put in something else" 
+//console.log(Example) // this will not work
+//--------------------------------------------------------------------------------------------------------------
+// let Example2= "this is an example" 
+// Example2 =" put in something else" 
+// console.log(Example2)
+//---------------------------------------------------------------------------------------------------------------
+// Variables: containers that are used to store data 
+//----------------------------------------------------------------------------------------------------------------
+// data: is simply any form of information that can easily be handled in a javaScript environment 
+//----------------------------------------------------------------------------------------------------------------
+// data types are: 
+// Numbers 
+// let Ten= 10 
+// Springs 
+//let my_string= "hello this is a string"
+//----------------------------------------------------------------------------------------------------------------
+ // String methods: 
+//console.log(my_string.length) // length of index of the string value
+//console.log(my_string.charAt(0))// h - takes the first index value
+//console.log(my_string.slice(1))// take the first letter off, and gets the rest of the words.
+//console.log(my_string.slice(0,1))// give me only the character at 0 (which is h) 
+//console.log(my_string.slice(1,10)) // removes first letter off and 10 letter
+//-----------------------------------------------------------------------------------------------------------------
+// convert an string to an array 
+// console.log(my_string.split("")) 
+//----------------------------------------------------------------------------------------------------------------
+// change an array to a string 
+// const second_array= ["this", " is ","me"] 
+// console.log(second_array.join(" ")) // this will join the array into a string with a space in
+//-----------------------------------------------------------------------------------------------------------------
+// convert a number to a string 
+// console.log(Ten.toString()) 
+//-----------------------------------------------------------------------------------------------------------------
+// convert a string back to a number 
+// console.log(parseInt(Ten.toString()))
+// or console.log(Number(Ten.toString())) 
+//-----------------------------------------------------------------------------------------------------------------
+// Boolean //let my_Boolean_value =true || false 
+//-----------------------------------------------------------------------------------------------------------------
+//Arrays: 
+//const my_Arrays=[12, 10, 6, 45,10, 10] // ["this", "is","good"] ['a','B'] etc 
+// array=> index => element => value 
+// console.log(my_Arrays[0]);
+// my_Arrays[0]= "dee" 
+// console.log(my_Arrays) 
+//-----------------------------------------------------------------------------------------------------------------
+// Array methods that are mostly used: 
+// console.log(my_Arrays.length) 
+// console.log(my_Arrays.includes(12))// check if an element exists in the array 
+// console.log(my_Arrays.indexOf(10)) // this returns the index contained at the mentioned element 
+//console.log(my_Arrays.lastIndexOf(10))  // this returns the index of the last element that is contained in the array
+//console.log(my_Arrays.splice(0,2))//=>[12,10] //this removed the rest of the elements in the array except the first two
+//console.log(my_Arrays.splice(2))//=> [ 6, 45, 10, 10 ] // removed the first two elements in the array
+
+//****************************************************************************************************************** */
+
+//HW assignment 1
+//const data = [10,23,12,7,18]
+//console.log(data.splice(2,1)) // extact the third data using splice 
+//console.log(data.splice(0,2)) // print the first to third element using splice
+
+//HW assignment 2
+//const string = "elephant"
+// print the second character using charAt method
+//console.log(string.charAt(1)) 
+
+// create a function that capitalizes the first letter of the word above using slice method
+//function capitaliseFirstLetter(n){
+//    return n.charAt(0).toUpperCase() + n.slice(1)
+//}
+//console.log(capitaliseFirstLetter(string))
+//Object is a data thats containt within the curley braces { } and the data which is contained are called properties 
