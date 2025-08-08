@@ -1,0 +1,55 @@
+const newObject = {
+  name: "frank",
+  country: "Slovakia",
+  favFoods: ["rice and stew", "jollof", "fried yams and omlet"],
+  color: ["Red", "Black"],
+  isAvailable: true,
+  age: 35
+};
+
+/*// Accessing object properties
+console.log(newObject.isAvailable);        // dot notation
+console.log(newObject["age"]);             // bracket notation
+
+// Update a property
+newObject["age"] = 45;
+console.log(newObject);
+
+// Print an array of keys in the object
+console.log(Object.keys(newObject));
+
+// Print an array of values in the object
+console.log(Object.values(newObject));
+
+// Create an array of key-value subarray pairs
+const newTuple = Object.entries(newObject);
+console.log(newTuple);
+
+// Convert array of key-value pairs back to an object
+console.log(Object.fromEntries(newTuple));
+
+// Check if a specific property exists in the object
+console.log(newObject.hasOwnProperty("height")); // false
+*/
+// HW Assignment:
+// Create a function that loops through all the properties in newObject
+// and adds new colors to the color property if it exists and is an array
+
+function addColor(obj) {
+  const newColors = ["Blue", "Yellow", "Pink"];
+
+  for (let key in obj) { //loops through all properties names (key) in the obj
+    //if (key.includes("color") && Array.isArray(obj[key])) { //if the property name is color and is an array list.
+if(key === "color" ) {
+      obj.color.push(...newColors); //add new colors to the array, and spread the newColors array into the existing array. without the ... it will add them as a nested array inside the array.
+    }
+  }
+  return obj;
+}
+
+console.log(addColor(newObject))
+
+for(let key in newObject) {
+console.log(key)
+}
+
