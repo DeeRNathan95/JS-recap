@@ -1,0 +1,137 @@
+//Lesson 3 and 4
+// create a function adds all the numbers in the array [1,2,3,4,5,6,7,8,9,20]
+/*
+const numbers = [1,2,3,4,5,6,7,8,9,20]
+
+
+function addAllNumbers(newNum) {
+let sum = 0
+    for (let i = 0; i < newNum.length; i++) {
+     sum += newNum[i];
+}
+return sum
+}
+
+console.log(addAllNumbers(numbers))
+
+*/
+
+//"Find the Lucky Sum"
+
+//Write a function that takes in three numbers. If any of the numbers is 13, ignore that number and the ones after it in the sum.
+
+const number = 12
+const number1 = 11
+const number2 = 13
+
+function luckySum(a, b, c) {  // 13,12,14
+
+    if (a === 13 ) return 0
+    if (b === 13) return a
+    if (c === 13) return a + b
+      else  return a + b + c 
+    }
+
+    console.log(luckySum(number, number1, number2))
+
+//The function should return the sum of the three numbers, ignoring any 13's.
+
+/**************************************************************************************************** */
+/*
+Arithmentic operators(+,-,/,%,, **)
+comparison operators(>,<,>=,<=,==,===)
+logical oparators(&& , || and !)
+Assignment operators(+=, -=,/=,%=,=, **=)
+tenary operators(? :)
+
+*/
+
+//let A = 10 , B = 30 , C=4 , D =3
+// console.log("divide :", A/B)// exreimist
+// console.log("modulo :",A%B )// lazy divide
+// console.log( DC)// 3x3x3x3
+// console.log(!!true && A%B == "20" || D 3 ===81 && !!false)
+
+// A -=3
+// console.log(A)
+/*
+if (A > 10) console.log( true)
+else if( A === 10) console.log("the numbers are equal")
+else console.log(false)
+
+function testValue(){
+(A> 10)? console.log(true):(A== 10)? console.log(" the numbers are equal") :console.log(false)
+}
+testValue()
+
+
+
+
+Is the Average a Whole Number?" 
+❓ Task:
+Write a function that takes three numbers and returns true if the average is a whole number, else return false.
+*/
+function isAverageWhole(num1, num2, num3) {
+  const average = (num1 + num2 + num3) / 3;
+  return Number.isInteger(average);
+}
+
+// Examples:
+console.log(isAverageWhole(1, 2, 3)); // true
+console.log(isAverageWhole(1, 2, 4)); // false
+
+/*
+Even-Odd Difference"
+❓ Task:
+Write a function that takes an array of numbers. Return the absolute difference between the sum of even numbers and odd numbers in the array.
+*/
+function evenOddDifference(arr) {
+  let evenSum = 0;
+  let oddSum = 0;
+
+  for (let num of arr) {
+    if (num % 2 === 0) {
+      evenSum += num;
+    } else {
+      oddSum += num;
+    }
+  }
+
+  return Math.abs(evenSum - oddSum);
+}
+
+// Examples:
+console.log(evenOddDifference([1, 2, 3, 4, 5])); // 3
+console.log(evenOddDifference([10, 21, 30, 41])); // 2
+
+
+//Create a function that finds the largest number in the array below
+
+/*
+const largest = [21,32,4,55]
+
+function findLargest(arr) {
+    
+    return Math.max(...arr);
+
+}
+
+console.log(findLargest(largest))
+
+
+/*
+const myVAlue=[55,24,14,25,46,39,18,45]
+
+what is the absolute difference between the mid and first element in the array const myVAlue=[55,24,14,25,46,39,18,45]
+*/
+
+const myVAlue=[55,24,14,25,46,39,18,45]
+function findDifference(arr) {
+let midIndex = Math.floor(arr.length / 2);
+let mid = arr[midIndex]
+let first = arr[0];
+return Math.abs(mid - first);
+}
+console.log(findDifference(myVAlue))
+
+
