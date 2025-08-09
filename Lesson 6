@@ -1,0 +1,23 @@
+Lesson 6
+const nigerianStates =["Lagos","Abuja","Kaduna","Kwara","Imo","Anambara","Kogi"]
+for( let i= 0; i < nigerianStates.length; i++){
+let pickThree=""
+let count=0
+//console.log(nigerianStates[i].toLowerCase())
+// if(nigerianStates[i].startsWith("K")){
+// console.log(nigerianStates[i])
+// }
+// if(nigerianStates[i][3] === "K"){
+// console.log(nigerianStates[i])
+// }
+
+for(let inner=0; inner<nigerianStates[i].length; inner++){
+
+//console.log(nigerianStates[i][inner])
+if(count < 3){
+pickThree +=nigerianStates[i][inner]
+count+=1
+} else break
+
+}
+console.log(pickThree)
