@@ -21,3 +21,20 @@ count+=1
 
 }
 console.log(pickThree)
+====================================
+
+You can replace your whole outer loop + inner loop with that one line.
+
+Here’s what it would look like in your existing file:
+
+javascript
+Copy
+Edit
+const nigerianStates = ["Lagos","Abuja","Kaduna","Kwara","Imo","Anambara","Kogi"]
+
+nigerianStates.forEach(state => console.log(state.slice(0, 3)));
+That’s it — no need for for loops, pickThree, or count, because:
+
+.forEach() automatically loops through each element in the array.
+
+.slice(0, 3) grabs the first 3 characters from the string.
