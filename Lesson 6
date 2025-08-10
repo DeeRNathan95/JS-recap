@@ -38,3 +38,42 @@ That’s it — no need for for loops, pickThree, or count, because:
 .forEach() automatically loops through each element in the array.
 
 .slice(0, 3) grabs the first 3 characters from the string.
+
+
+
+===========================================
+
+const studentProfile = {
+name: "John Doe",
+age: 20,
+courses: [
+    {title: "Mathematics", grades: [85, 90, 88]},{title: "Computer Science",grades: [92, 87, 94]}
+],
+hobbies: ["reading", "coding", "basketball"]
+};
+
+for (pickHobbies of studentProfile.hobbies) {
+    console.log(pickHobbies)
+}
+
+//function that calcultates the average grade of mathematics and computer science SEPERATELY from the object given.
+function averageGrade() {
+    let averages = {}; // object to store average per course
+
+    for (let i = 0; i < studentProfile.courses.length; i++) {
+        let course = studentProfile.courses[i];
+        let sum = 0;
+
+        for (let j = 0; j < course.grades.length; j++) {
+            sum += course.grades[j];
+        }
+
+        let average = sum / course.grades.length;
+        averages[course.title] = average; // store result by course title //The [] means dynamic property name — whatever string is inside becomes the key in the object.
+//The = assigns that key a value.
+    }
+
+    return averages;
+}
+
+console.log(averageGrade());
