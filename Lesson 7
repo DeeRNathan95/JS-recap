@@ -1,0 +1,27 @@
+
+
+const ArrayTest= [true, false, false, true, true]
+
+// ArrayTest.forEach((element,index,array)=>{
+// //console.log("element method:",element);
+// // console.log(array[array.length-1-index])
+// if(array.includes(true)){
+// console.log(element)
+// }
+
+// })
+
+// global counter, condition and main code
+
+let output= ArrayTest.length
+let counter=0// global counter
+// while(counter < output){
+// console.log(ArrayTest[output-1-counter])
+// counter++
+// }
+
+do{
+console.log(ArrayTest[output-1-counter])
+counter++
+}
+while(counter < output)
