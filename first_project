@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  div {
+    position: relative; /* important so child can layer on top */
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    border: 2px solid black;
+  }
+
+  p {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    z-index: 1;
+  }
+
+  span {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    z-index: 2;
+  }
+
+  .test {
+    position: absolute; /* place it relative to the div */
+    top: 10px;
+    left: 10px;
+    background-color: blue;
+    color: white;
+    z-index: 10; /* ensures it appears on top */
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  button {
+    margin: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+
+</head>
+<body>
+    <button id="toggleBtn">Toggle Who’s on Top</button>
+    <button id="Btn">Home</button>
+
+<div>
+  <p id="para">This is a paragraph</p>
+  <span id="spanEl">Span text</span>
+  <div class="test" id="testBox">I am on top!</div>
+</div>
+<script>
+    const para = document.getElementById("para");
+const spanEl = document.getElementById("spanEl");
+const testBox = document.getElementById("testBox");
+const btn = document.getElementById("toggleBtn");
+const homeBtn = document.getElementById("Btn");
+let toggle = 0;
+homeBtn.addEventListener("click", () => {
+    homeBtn.textContent = 'Dee'
+})
+btn.addEventListener("click", () => {
+  toggle++;
+
+  if (toggle % 3 === 1) {
+    // Paragraph on top
+    para.style.zIndex = 20;
+    spanEl.style.zIndex = 1;
+    testBox.style.zIndex = 1;
+    btn.textContent = "Paragraph is on Top";
+  } else if (toggle % 3 === 2) {
+    // Span on top
+    para.style.zIndex = 1;
+    spanEl.style.zIndex = 20;
+    testBox.style.zIndex = 1;
+    btn.textContent = "Span is on Top";
+  } else {
+    // Test box on top
+    para.style.zIndex = 1;
+    spanEl.style.zIndex = 1;
+    testBox.style.zIndex = 20;
+    btn.textContent = "Box is on Top";
+  }
+});
+
+</script>
+</body>
+</html>
